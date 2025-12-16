@@ -13,6 +13,7 @@ import com.example.koszykowka.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
+    private int punkty = 0;
     ActivityMainBinding binding; //klasa z bindowanymi widokami
     //dla pliku activity_main.xml ActivityMainBinding
     @Override
@@ -28,6 +29,39 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
-        binding.numerView.setText("proba");
+        binding.numerView.setText("0");
+
+        binding.button1.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        punkty++;
+                        binding.numerView.setText("" + punkty);
+
+                    }
+                }
+        );
+
+        binding.button2.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        punkty += 2;
+                        binding.numerView.setText("" + punkty);
+
+                    }
+                }
+        );
+
+        binding.button3.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        punkty += 3;
+                        binding.numerView.setText("" + punkty);
+
+                    }
+                }
+        );
     }
 }
