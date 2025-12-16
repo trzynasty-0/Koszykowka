@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:text="+ 1"
         app:layout_constraintBottom_toTopOf="@id/button2"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button4"
         app:layout_constraintStart_toEndOf="@id/numerView"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -45,5 +45,33 @@
         app:layout_constraintStart_toStartOf="@id/button1"
         app:layout_constraintTop_toBottomOf="@id/button2"
         app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/numerView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/button1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
